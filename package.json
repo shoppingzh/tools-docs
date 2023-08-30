@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@types/lodash": "^4.14.197",
     "@types/node": "^18.14.1",
     "@types/rimraf": "^3.0.2",
     "autoprefixer": "^10.4.13",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "element-plus": "^2.2.32",
+    "lodash": "^4.17.21",
     "medium-zoom": "^1.0.8"
   }
 }
