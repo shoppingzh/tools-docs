@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { createWatermark } from 'tools/lib/dom'
+import { createWatermark } from '@shoppingzh/tools/lib/dom'
 import { onMounted, ref } from 'vue';
 
 const el = ref()

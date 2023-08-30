@@ -42,7 +42,7 @@
 
 <script setup lang="ts">
 import { ElColorPicker, ElForm, ElFormItem, ElInput, ElInputNumber, ElSwitch } from 'element-plus';
-import { createWatermark, CreateWatermarkOptions } from 'tools/lib/dom'
+import { createWatermark, CreateWatermarkOptions } from '@shoppingzh/tools/lib/dom'
 import { computed, onMounted, reactive, ref, watch } from 'vue';
 import { debounce } from 'lodash'
 
