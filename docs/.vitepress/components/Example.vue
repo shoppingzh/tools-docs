@@ -4,7 +4,7 @@
     dark:border-gray-500
     hover:shadow-2xl hover:translate-x-[-3px] hover:translate-y-[-3px]">
     <div class="absolute left-0 top-0 inline-block bg-teal-500 py-1 px-4 text-white text-xs rounded-br">
-      <span>Example</span>
+      <span>试一试</span>
     </div>
     <div class="example__inner">
       <slot />
