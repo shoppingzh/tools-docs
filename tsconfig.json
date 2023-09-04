@@ -4,7 +4,10 @@
     "esModuleInterop": true,
     "paths": {
       "@/*": ["docs/.vitepress/*"]
-    }
+    },
+    "types": [
+      "element-plus/global"
+    ]
   },
   "include": ["docs/**/*", "docs/.vitepress/**/*"],
   "exclude": ["node_modules"] 
