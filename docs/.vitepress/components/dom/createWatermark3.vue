@@ -29,7 +29,7 @@ function render() {
       bgColor: 'rgba(0, 0, 0, .1)',
       fontBold: true,
       rotate: 30,
-      padding: [40, 40],
+      padding: [100, 100],
     })
   }
 
