@@ -11,6 +11,9 @@
 
 **参数**
 
+1. `el` (HTMLElement | HTMLCanvasElement): DOM元素
+2. `text` (string): 文字内容
+3. `options` (CreateWatermarkOptions): 选项
 
 ```ts
 interface WatermarkCoreOptions {
@@ -27,16 +30,14 @@ interface WatermarkCoreOptions {
   padding?: [number, number]
 }
 
-export interface CreateWatermarkOptions extends WatermarkCoreOptions {
-  zIndex?: number
-}
+export type CreateWatermarkOptions = WatermarkCoreOptions
 ```
 
 **返回值**
 
-无
+(void)
 
-
+### 更多
 
 追加水印的元素分为两种类型：
 
@@ -75,3 +76,20 @@ export interface CreateWatermarkOptions extends WatermarkCoreOptions {
 
 尽管可以通过设置 `a` 标签的 `target` 属性为 `_blank` ，但这又会打开一个新的窗口，并且如果发生错误，页面仍然会替换，对于需要静默下载的场景，这种做法仍然不能解决问题。
 :::
+
+## downloadBlob 下载Blob
+
+下载Blob。
+
+<Example>
+  <dom-downloadBlob />
+</Example>
+
+**参数**
+
+1. `blob` (Blob): Blob对象
+2. `filename` (string): 文件名
+
+**返回值**
+
+(void)
