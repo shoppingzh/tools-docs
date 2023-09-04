@@ -48,3 +48,30 @@ export interface CreateWatermarkOptions extends WatermarkCoreOptions {
 **canvas**
 
 <dom-createWatermark3 />
+
+## download 下载文件
+
+通过构造 `a` 标签来下载文件。
+
+
+<Example>
+  <dom-download />
+</Example>
+
+**参数**
+
+1. `url` (stirng): 下载链接
+2. `filename` (string): 下载文件名
+3. `newWindow` (boolean): 是否在新窗口打开
+
+**返回值**
+
+(void)
+
+
+
+::: danger 注意
+要知道，基于 `a` 标签下载的方案并不好。 `a` 标签的点击会造成 **同步请求**，因此，如果下载的链接返回错误，将导致当前页面被替换，这种体验是不好的。
+
+尽管可以通过设置 `a` 标签的 `target` 属性为 `_blank` ，但这又会打开一个新的窗口，并且如果发生错误，页面仍然会替换，对于需要静默下载的场景，这种做法仍然不能解决问题。
+:::
