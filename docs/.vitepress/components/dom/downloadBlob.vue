@@ -1,5 +1,5 @@
 <template>
-  <ElInput v-model="text" type="textarea" :rows="5" />
+  <ElInput v-model="text" type="textarea" :rows="5" placeholder="输入一段内容，并将此内容下载为文件" />
 
   <div class="mt-4">
     <ElButton type="primary" @click="done">下载</ElButton>

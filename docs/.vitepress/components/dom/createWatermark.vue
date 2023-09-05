@@ -49,7 +49,7 @@ const text = ref('createWatermark')
 const options = reactive<CreateWatermarkOptions>({
   textSize: 16,
   rotate: -15,
-  padding: [100, 100],
+  padding: [200, 200],
 })
 const paddingX = computed({
   get() {
