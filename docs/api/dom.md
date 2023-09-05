@@ -93,3 +93,22 @@ export type CreateWatermarkOptions = WatermarkCoreOptions
 **返回值**
 
 (void)
+
+### 经典场景复现：异步下载
+
+异步下载大致分为以下步骤：
+
+1. 使用异步请求获取到一个Blob对象
+2. 将这个Blob对象下载到本地
+
+<Example>
+  <dom-downloadBlob2 />
+</Example>
+
+::: tip 优势
+异步下载最大的优势就是下载过程可控，诸如加loading这种基于同步下载做不到的事都可以做到了。
+:::
+
+::: danger 劣势
+异步下载最大的问题就是跨域。
+:::
