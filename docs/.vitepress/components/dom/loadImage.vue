@@ -1,5 +1,5 @@
 <template>
-  <div ref="el" class="h-[300px] bg-gray-50">
+  <div ref="el" class="h-[300px] bg-gray-50 dark:bg-gray-600">
     <div class="w-full h-full flex justify-center items-center text-gray-400 text-sm pointer-events-none select-none">等待加载..</div>
   </div>
 
@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { loadImage } from '@shoppingzh/tools/lib/dom';
+import { loadImage, setStyle } from '@shoppingzh/tools/lib/dom';
 import { ElMessageBox } from 'element-plus';
 import { ref } from 'vue';
 
