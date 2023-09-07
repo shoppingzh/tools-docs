@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-[400px] relative border border-gray-300">
-    <div class="p-2 w-full h-full overflow-auto relative text-sm" v-html="html" />
+    <div class="px-2 w-full h-full overflow-auto relative text-sm" v-html="html" />
 
     <div ref="el" class="absolute pointer-events-none inset-0 z-[10]" />
   </div>
@@ -11,7 +11,6 @@ import { createWatermark } from '@shoppingzh/tools/lib/dom'
 import { computed, onMounted, ref } from 'vue';
 
 const el = ref()
-const el2 = ref()
 const text = ref(`
 君不见，黄河之水天上来，奔流到海不复回。
 
