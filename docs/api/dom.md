@@ -112,3 +112,23 @@ export type CreateWatermarkOptions = WatermarkCoreOptions
 ::: danger 劣势
 异步下载最大的问题就是跨域。
 :::
+
+## loadImage
+
+加载图片，适用于动态插入图片元素或在canvas上动态绘制图片的场景。
+
+<Example>
+  <dom-loadImage />
+</Example>
+
+**签名**
+
+`function loadImage(url: string): Promise<HTMLImageElement>`
+
+**参数**
+
+1. `url` (string): 图片地址
+
+**返回值**
+
+(Image): 图片元素对象

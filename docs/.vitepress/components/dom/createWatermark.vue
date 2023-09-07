@@ -1,9 +1,9 @@
 <template>
   <!-- <div ref="el" class="w-full h-[500px] border border-gray-200" /> -->
   <Teleport to="body">
-    <div ref="el" class="fixed inset-0 pointer-events-none z-[9999999]" />
+    <div v-show="show" ref="el" class="fixed inset-0 pointer-events-none z-[9999999]" />
   </Teleport>
-  <ElForm :model="options" label-width="120">
+  <ElForm ref="containerEl" :model="options" label-width="120">
     <ElFormItem label="文字">
       <ElInput v-model="text" />
     </ElFormItem>
@@ -42,6 +42,7 @@ import { ElColorPicker, ElForm, ElFormItem, ElInput, ElInputNumber, ElSwitch } f
 import { createWatermark, CreateWatermarkOptions } from '@shoppingzh/tools/lib/dom'
 import { computed, onMounted, reactive, ref, watch } from 'vue';
 import { debounce } from 'lodash'
+import { useElementVisibility } from '@vueuse/core'
 
 const el = ref()
 
@@ -67,6 +68,8 @@ const paddingY = computed({
     options.padding[1] = newVal
   }
 })
+const containerEl = ref<HTMLElement>()
+const show = useElementVisibility(containerEl)
 
 function render() {
   createWatermark(el.value, text.value, options)
