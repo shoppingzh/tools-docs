@@ -9,6 +9,10 @@
   <dom-createWatermark />
 </Example>
 
+**签名**
+
+`createWatermark(el: HTMLElement | HTMLCanvasElement, text: string, options: CreateWatermarkOptions)`
+
 **参数**
 
 1. `el` (HTMLElement | HTMLCanvasElement): DOM元素
@@ -59,6 +63,10 @@ export type CreateWatermarkOptions = WatermarkCoreOptions
   <dom-download />
 </Example>
 
+**签名**
+
+`download(url: string, filename?: string, newWindow?: boolean): void`
+
 **参数**
 
 1. `url` (stirng): 下载链接
@@ -84,6 +92,10 @@ export type CreateWatermarkOptions = WatermarkCoreOptions
 <Example>
   <dom-downloadBlob />
 </Example>
+
+**签名**
+
+`downloadBlob(blob: Blob, filename?: string): void`
 
 **参数**
 
@@ -123,7 +135,7 @@ export type CreateWatermarkOptions = WatermarkCoreOptions
 
 **签名**
 
-`function loadImage(url: string): Promise<HTMLImageElement>`
+`loadImage(url: string): Promise<HTMLImageElement>`
 
 **参数**
 

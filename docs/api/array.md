@@ -8,6 +8,12 @@
   <array-insert />
 </Example>
 
+**签名**
+
+`insert<T>(arr: T[], index: number, objects: T[]): T[]`
+
+`insert<T>(arr: T[], index: number, object: T): T[]`
+
 **参数**
 
 1. `arr` (T[]): 数组
@@ -27,6 +33,12 @@
   <array-remove />
 </Example>
 
+**签名**
+
+`remove<T>(arr: T[], index: number): T[]`
+
+`remove<T>(arr: T[], indexes: number[]): T[]`
+
 **参数**
 
 1. `arr` (T[]): 数组
@@ -45,6 +57,10 @@
   <array-move />
 </Example>
 
+**签名**
+
+`move<T>(arr: T[], fromIndex: number, toIndex: number): T[]`
+
 **参数**
 
 1. `arr` (T[]): 数组
@@ -59,6 +75,10 @@
 ## toMap 转map
 
 将一个 **对象数组** 转换为一个对象（常用于哈希表快速查找的场景）。
+
+**签名**
+
+`toMap<T extends object>(arr: T[], keyOrMapKey: (keyof T) | ((o: T) => ObjectKeyType)): Record<ObjectKeyType, T>`
 
 **参数**
 

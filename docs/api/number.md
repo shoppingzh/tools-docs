@@ -10,7 +10,7 @@
 
 **签名**
 
-`function format(value: number, thousandth?: boolean, fraction?: number): string`
+`format(value: number, thousandth?: boolean, fraction?: number): string`
 
 **参数**
 

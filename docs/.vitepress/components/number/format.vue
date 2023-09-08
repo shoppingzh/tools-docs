@@ -14,9 +14,9 @@
       </ElForm>
     </div>
     <div class="flex-1 text-center text-2xl font-semibold truncate tracking-wide">
-      <span :key="formatValue">{{ formatValue }}</span>
-      <!-- <Transition name="fade">
-      </Transition> -->
+      <Transition name="fade">
+        <span :key="formatValue">{{ formatValue }}</span>
+      </Transition>
     </div>
   </div>
 </template>
@@ -26,9 +26,9 @@ import { computed, reactive, ref } from 'vue';
 import { format } from '@shoppingzh/tools/lib/number'
 
 const form = reactive({
-  value: 1234.5678,
-  thousandth: false,
-  fraction: null,
+  value: 12345.6789,
+  thousandth: true,
+  fraction: 2,
 })
 const formatValue = computed(() => format(form.value, form.thousandth, form.fraction))
 </script>
@@ -42,10 +42,10 @@ const formatValue = computed(() => format(form.value, form.thousandth, form.frac
     /* @apply  */
   }
   &-leave-to {
-    @apply absolute scale-0;
+    @apply absolute;
   }
   &-enter-active, &-leave-active {
-    @apply transition-all duration-500;
+    @apply transition-all duration-200;
   }
 }
 </style>
