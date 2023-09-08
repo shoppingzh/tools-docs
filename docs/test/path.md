@@ -13,11 +13,12 @@
 - `object` value：
   - undefined/null
   - string/number/boolean/symbol/bigint
-  - 对象
+  - 数组
+  - Set/Map
+  - 其他
     - Object
     - Date
     - RegExp
-    - 其他
 - `encode`
   - true/false
   - undefined/null/number/string/symbol/function/...
