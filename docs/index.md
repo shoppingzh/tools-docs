@@ -2,7 +2,8 @@
 layout: home
 hero:
   name: 工具库
-  tagline: 工具库
+  # text: xxx
+  tagline: 一款通用的、高效的工具库，助您快速完成业务开发。
   image:
     src: /brand.svg
   actions:
@@ -12,16 +13,14 @@ hero:
     # - theme: alt
     #   text: 使用技巧
     #   link: /skills
-# features:
-#   - icon: ⚡
-#     title: 简单
-#     details: 开箱即用，只需要简单配置，就可以马上使用。
-#   - icon: 🛠️
-#     title: 全面
-#     details: 集成组件库、TailwindCSS、SVG图标等默认解决方案，应有尽有！
-#   - icon: ✊
-#     title: 强大
-#     link: https://github.com/shoppingzh/press-util
-#     linkText: 更多
-#     details: 自动生成导航栏与侧边栏，你的烦恼即是我的烦恼。
+features:
+  - icon: ⚡
+    title: 快
+    details: 性能优秀的算法
+  - icon: 🛠️
+    title: 稳
+    details: 每一个API都经过了审慎的设计，保证稳定性
+  - icon: ✊
+    title: 强
+    details: 80%以上的单元测试覆盖率
 ---
