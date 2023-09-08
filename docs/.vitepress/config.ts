@@ -25,8 +25,11 @@ export default defineConfig({
       text: '🎯 快速入手',
       link: '/start.md'
     }, {
-      text: '🔖 模块',
+      text: '🛒 模块',
       link: getFirstDocLink('/api')
+    }, {
+      text: '🛡️ 测试用例',
+      link: getFirstDocLink('/test')
     }],
     sidebar: autoGenerateSidebar() as any,
   }
