@@ -1,5 +1,25 @@
 # path
 
+## join
+
+连接路径。
+
+<Example>
+  <path-join />
+</Example>
+
+**签名**
+
+`join(...paths: string[]): string`
+
+**参数**
+
+1. `paths` (string[]): 路径列表
+
+**返回值**
+
+(string): 拼接后的字符串
+
 ## createQuerystring
 
 从对象创建查询字符串。
