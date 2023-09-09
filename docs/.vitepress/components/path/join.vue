@@ -22,8 +22,8 @@
     </div>
   </div>
   <div class="mt-4">
-    <span>结果：</span>
-    <span>{{ result }}</span>
+    <span class="text-sm text-gray-400">结果：</span>
+    <span class="text-lg font-semibold">{{ result }}</span>
   </div>
 </template>
 

@@ -20,6 +20,12 @@
 
 (string): 拼接后的字符串
 
+::: danger 注意
+该算法不特殊处理以协议开头的路径，如 `join('https://', 'google.com')` 会被处理为 `https:/google.com`。
+
+该算法默认一切皆路径，其抽象程度是比URL还要大的。
+:::
+
 ## createQuerystring
 
 从对象创建查询字符串。
