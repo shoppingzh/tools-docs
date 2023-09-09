@@ -23,3 +23,10 @@
   - true/false
   - undefined/null/number/string/symbol/function/...
 
+## parseFilename
+
+`parseFilename(filename: string): ParseResult`
+
+- `filename`：
+  - undefined/null
+  - 不为string
