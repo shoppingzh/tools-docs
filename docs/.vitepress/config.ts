@@ -30,6 +30,9 @@ export default defineConfig({
     }, {
       text: '🛡️ 测试用例',
       link: getFirstDocLink('/test')
+    }, {
+      text: '⛵ 其他',
+      link: getFirstDocLink('/others')
     }],
     sidebar: autoGenerateSidebar() as any,
   }
