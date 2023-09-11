@@ -10,7 +10,7 @@
         v-model="paths[index]"
         placeholder="按回车添加新行"
         @keydown.enter="handleInsert(index)"
-        @keydown.backspace="(e) => handleBackspace(index, e)" />
+        @keydown.backspace="(e: KeyboardEvent) => handleBackspace(index, e)" />
     </div>
     <div class="ml-4">
       <ElLink type="primary" :underline="false" @click="handleInsert(index)">
