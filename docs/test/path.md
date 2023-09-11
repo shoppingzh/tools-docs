@@ -30,3 +30,8 @@
 - `filename`：
   - undefined/null
   - 不为string
+  - 空字符串
+  - 没有后缀，如 `README`
+  - 文件名以 `.` 开头，如 `.gitignore`
+  - 文件名以 `.` 结尾（事实是操作系统不允许创建此类文件名），如 `README.`
+  - 文件名很多 `.` ，如 `xpzheng.README.md`
