@@ -7,7 +7,9 @@
 <script setup lang="ts">
 import { createWatermark, loadImage } from '@shoppingzh/tools/lib/dom'
 import { onMounted, ref } from 'vue';
-import bg from './bg.jpg'
+// import bg from './bg.jpg'
+
+const bg = '/logo.svg'
 
 const containerEl = ref<HTMLElement>()
 const el = ref<HTMLCanvasElement>()
@@ -23,10 +25,10 @@ async function render() {
   ctx.drawImage(img, 0, 0)
 
   createWatermark(el.value, '我是图片水印', {
-    textColor: 'green',
-    textSize: 20,
-    bgColor: 'rgba(0, 0, 0, .1)',
-    fontBold: true,
+    textColor: 'rgba(255, 255, 255, .4)',
+    textSize: 12,
+    // fontBold: true,
+    fontItalic: true,
     rotate: 30,
     padding: [100, 100],
   })

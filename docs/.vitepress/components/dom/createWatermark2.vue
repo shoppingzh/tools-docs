@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[400px] relative border border-gray-300">
+  <div class="w-full h-[400px] relative border border-gray-200">
     <div class="px-2 w-full h-full overflow-auto relative text-sm" v-html="html" />
 
     <div ref="el" class="absolute pointer-events-none inset-0 z-[10]" />
@@ -44,9 +44,10 @@ const html = computed(() => {
 function render() {
   createWatermark(el.value, '涉 密 内 容', {
     // bgColor: 'rgba(0, 0, 0, .3)',
-    textColor: 'rgba(0, 0, 0, .5)',
+    textColor: 'rgba(0, 0, 0, .15)',
     rotate: -30,
-    // padding: [2, 2],
+    textSize: 14,
+    padding: [50, 50],
   })
 }
 

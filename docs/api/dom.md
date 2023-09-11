@@ -85,6 +85,27 @@ export type CreateWatermarkOptions = WatermarkCoreOptions
 尽管可以通过设置 `a` 标签的 `target` 属性为 `_blank` ，但这又会打开一个新的窗口，并且如果发生错误，页面仍然会替换，对于需要静默下载的场景，这种做法仍然不能解决问题。
 :::
 
+## downloadSilent 静默下载
+
+静默同步下载（使用iframe）。
+
+<Example>
+  <dom-downloadSilent />
+</Example>
+
+**签名**
+
+`downloadSilent(url: string): void`
+
+**参数**
+
+1. `url` (string): 文件URL
+
+**返回值**
+
+(void)
+
+
 ## downloadBlob 下载Blob
 
 下载Blob。
