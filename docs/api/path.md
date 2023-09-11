@@ -61,3 +61,33 @@ interface Options<T> {
 - 基本数据类型：转成字符串
 - 数组：展开每个项，每个项转成字符串（注：只处理数组第一层，不处理更深层级）
 - 对象：调用对象 `toString` 转成字符串
+
+## parseFilename
+
+解析文件名。
+
+<Example>
+  <path-parseFilename />
+</Example>
+
+**签名**
+
+`parseFilename(filename: string, withSeperator?: boolean): ParseResult`
+
+**参数**
+
+1. `filename` (string): 文件名
+2. `withSeperator` (boolean): 后缀名是否带分隔符
+
+**返回值**
+
+(ParseResult): 解析结果
+
+**types**
+
+```ts
+interface ParseResult {
+  basename: string
+  extname: string
+}
+```
