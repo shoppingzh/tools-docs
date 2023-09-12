@@ -2,6 +2,10 @@
 
 ## parseFromList 集合转树
 
+<Example>
+  <tree-parseFromList />
+</Example>
+
 **签名**
 
 `parseFromList<S extends object, R extends S & Node>(list: S[], props?: Props<S, R>): R[]`
