@@ -2,10 +2,12 @@
   <div ref="containerEl" class="w-full">
     <canvas ref="el" height="400" />
   </div>
+  <ElLink class="mt-2" :underline="false" @click="handleDownload">下载图片</ElLink>
 </template>
 
 <script setup lang="ts">
-import { createWatermark, loadImage } from '@shoppingzh/tools/lib/dom'
+import { createWatermark, downloadBlob, loadImage } from '@shoppingzh/tools/lib/dom'
+import { ElMessageBox } from 'element-plus';
 import { onMounted, ref } from 'vue';
 // import bg from './bg.jpg'
 
@@ -32,6 +34,13 @@ async function render() {
     rotate: 30,
     padding: [100, 100],
   })
+}
+
+function handleDownload() {
+  el.value.toBlob((blob) => {
+    if (!blob) return ElMessageBox.alert('转Blob失败！')
+    downloadBlob(blob, 'image.png')
+  }, 'image/png')
 }
 
 onMounted(render)
