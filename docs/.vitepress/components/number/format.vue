@@ -15,7 +15,7 @@
     </div>
     <div class="flex-1 text-center text-2xl font-semibold truncate tracking-wide">
       <Transition name="fade">
-        <span :key="formatValue">{{ formatValue }}</span>
+        <span :key="formatValue" class="inline-block px-2 bg-blue-400 text-white">{{ formatValue }}</span>
       </Transition>
     </div>
   </div>
