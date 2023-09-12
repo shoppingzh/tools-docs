@@ -14,3 +14,16 @@
   - 不带后缀名
 - `newWindow`
   - undefined/null
+
+
+## setTitle
+
+`setTitle(title: string)`
+
+- `title`
+  - undefined/null
+  - 空字符串
+  - number/boolean/function/...
+  - 数组
+  - 对象
+  - 其他类型

@@ -146,7 +146,7 @@ export type CreateWatermarkOptions = WatermarkCoreOptions
 异步下载最大的问题就是跨域。
 :::
 
-## loadImage
+## loadImage 加载图片
 
 加载图片，适用于动态插入图片元素或在canvas上动态绘制图片的场景。
 
@@ -165,3 +165,24 @@ export type CreateWatermarkOptions = WatermarkCoreOptions
 **返回值**
 
 (Image): 图片元素对象
+
+## setTitle 设置标题
+
+设置浏览器窗口标题。
+
+<Example>
+  <dom-setTitle />
+</Example>
+
+**签名**
+
+`setTitle(title: string)`
+
+**参数**
+
+1. `title` (string): 标题
+
+**返回值**
+
+(void)
+
