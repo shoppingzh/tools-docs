@@ -105,6 +105,12 @@ export type CreateWatermarkOptions = WatermarkCoreOptions
 
 (void)
 
+::: danger 注意
+静默下载解决了使用 `a` 标签导致当前页刷新或新开页面的情况，但也同时带来一个副作用：
+
+因为静默下载，因此也会引起静默失败，当下载失败时，用户得不到任何错误消息。
+:::
+
 
 ## downloadBlob 下载Blob
 
