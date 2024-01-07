@@ -16,4 +16,12 @@ export default defineConfig({
       symbolId: 'svg-icon/[name]',
     }),
   ],
+  build: {
+    rollupOptions: {
+      external: [
+        /^@babel\/runtime/,
+        /lodash/,
+      ]
+    }
+  }
 })

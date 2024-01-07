@@ -22,9 +22,13 @@
     "gen-icons": "node docs/.vitepress/build/gen-icons.js"
   },
   "dependencies": {
+    "@babel/runtime": "^7.23.7",
+    "@babel/runtime-corejs3": "^7.23.7",
     "@element-plus/icons-vue": "^2.1.0",
     "@shoppingzh/tools": "^0.0.1",
     "@vueuse/core": "^10.4.1",
+    "core-js": "^3.35.0",
+    "core-js-pure": "^3.35.0",
     "element-plus": "^2.2.32",
     "lodash": "^4.17.21",
     "medium-zoom": "^1.0.8"
