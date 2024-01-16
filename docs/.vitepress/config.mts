@@ -27,10 +27,10 @@ export default defineConfig({
     }, {
       text: '🛒 模块',
       link: getFirstDocLink('/api')
-    }, {
+    }, /* {
       text: '🛡️ 测试用例',
       link: getFirstDocLink('/test')
-    }, {
+    },  */{
       text: '⛵ 其他',
       link: getFirstDocLink('/others')
     }],
