@@ -1,6 +1,7 @@
 dom
 number
 string
+datetime
 array
 tree
 path
