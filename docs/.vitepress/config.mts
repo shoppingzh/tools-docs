@@ -35,5 +35,12 @@ export default defineConfig({
       link: getFirstDocLink('/others')
     }],
     sidebar: autoGenerateSidebar() as any,
+    search: {
+      provider: 'local'
+    },
+    socialLinks: [{
+      icon: 'github',
+      link: 'https://github.com/shoppingzh/tools',
+    }]
   }
 })
