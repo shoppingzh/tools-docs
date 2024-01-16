@@ -46,11 +46,12 @@ import { useElementVisibility } from '@vueuse/core'
 
 const el = ref()
 
-const text = ref('createWatermark')
+const text = ref('我是一个水印')
 const options = reactive<CreateWatermarkOptions>({
-  textSize: 16,
+  textSize: 20,
   rotate: -15,
-  padding: [200, 200],
+  textColor: 'rgba(0, 0, 0, .1)',
+  padding: [100, 100],
 })
 const paddingX = computed({
   get() {
