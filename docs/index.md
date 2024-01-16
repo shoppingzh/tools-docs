@@ -4,8 +4,8 @@ hero:
   name: 工具库
   # text: xxx
   tagline: 一款通用的、高效的工具库，助您快速完成业务开发。
-  image:
-    src: /brand.svg
+  # image:
+  #   src: /brand.svg
   actions:
     - theme: brand
       text: 快速入手
