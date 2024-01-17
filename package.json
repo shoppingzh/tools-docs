@@ -32,6 +32,7 @@
     "dayjs": "^1.11.10",
     "element-plus": "^2.2.32",
     "lodash": "^4.17.21",
+    "magic-hooks": "^0.0.5",
     "medium-zoom": "^1.0.8"
   }
 }
