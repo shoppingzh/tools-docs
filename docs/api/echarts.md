@@ -1,5 +1,7 @@
 # echarts
 
+## withTheme
+
 <Example>
-  <ehcarts-withTheme />
+  <echarts-withTheme />
 </Example>

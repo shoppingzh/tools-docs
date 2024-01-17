@@ -25,7 +25,7 @@ import mediumZoom, { Zoom } from 'medium-zoom'
 import { onBeforeMount, onMounted, ref, watch } from 'vue'
 import { useRouter, useRoute, onContentUpdated } from 'vitepress'
 import { createWatermark } from '@shoppingzh/tools/lib/dom'
-import zhCn from 'element-plus/lib/locale/lang/zh-cn'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 
 const { Layout } = Theme
 let zoom: Zoom
