@@ -55,8 +55,8 @@ const types = [
 ]
 
 const model = reactive({
-  type: 'year',
-  range: [null, null] as [Date, Date],
+  type: 'day',
+  range: [dayjs('2024-01-16 12:00:00').toDate(), dayjs('2024-05-01 09:00:00').toDate()] as [Date, Date],
 })
 const allFormat = ref(false)
 const format = computed(() => {
