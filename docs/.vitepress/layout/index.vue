@@ -1,15 +1,17 @@
 <template>
-  <Layout>
-    <template #layout-top>
-      <el-backtop>
-        <svg-icon name="huojian" class="text-2xl" />
-      </el-backtop>
-      <div ref="watermarkEl" class="fixed inset-0 z-[99999] pointer-events-none" />
-    </template>
-    <template #doc-before>
-      <DocBefore />
-    </template>
-  </Layout>
+  <ElConfigProvider :locale="zhCn">
+    <Layout>
+      <template #layout-top>
+        <el-backtop>
+          <svg-icon name="huojian" class="text-2xl" />
+        </el-backtop>
+        <div ref="watermarkEl" class="fixed inset-0 z-[99999] pointer-events-none" />
+      </template>
+      <template #doc-before>
+        <DocBefore />
+      </template>
+    </Layout>
+  </ElConfigProvider>
 </template>
 
 <script lang="ts">
@@ -23,6 +25,7 @@ import mediumZoom, { Zoom } from 'medium-zoom'
 import { onBeforeMount, onMounted, ref, watch } from 'vue'
 import { useRouter, useRoute, onContentUpdated } from 'vitepress'
 import { createWatermark } from '@shoppingzh/tools/lib/dom'
+import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 
 const { Layout } = Theme
 let zoom: Zoom
