@@ -31,17 +31,22 @@
 
 <script setup lang="ts">
 import { withTheme, Theme } from '@shoppingzh/tools/lib/echarts'
+import { useIntervalFn } from '@vueuse/core';
 import { random } from 'lodash';
 import useChart from 'magic-hooks/lib/useChart'
 import useSelect from 'magic-hooks/lib/useSelect'
-import { computed, onMounted, reactive } from 'vue';
+import { computed, onMounted, reactive, ref } from 'vue';
 
 const dimensions = ['安徽省', '广东省', '北京市', '上海市', '陕西省', '辽宁省']
-const barData = dimensions.map(o => random(0, 1000))
-const lineData = dimensions.map(o => random(0, 1000))
 const popper = reactive({
   settings: false,
 })
+function generateData() {
+  return dimensions.map(o => ({ name: o, value: random(0, 1000) }))
+}
+const barData = ref(generateData())
+const lineData = ref(generateData())
+const pieData = ref(generateData())
 
 const theme = reactive<Theme>({
   title: {
@@ -101,7 +106,7 @@ const theme = reactive<Theme>({
       itemWidth: 5,
       itemHeight: 5,
     },
-  }
+  },
 })
 const { activeValue: value1, items: tabs1 } = useSelect({
   items: [{
@@ -125,10 +130,8 @@ const { activeValue: value2, items: tabs2 } = useSelect({
 })
 const axis = computed(() => theme.axis[value2.value as keyof Theme['axis']])
 
-
-
 const option = computed(() => {
-  return withTheme({
+  const option = withTheme({
     title: [{
       text: '标题一',
     }, {
@@ -153,26 +156,31 @@ const option = computed(() => {
     }],
     series: [{
       type: 'bar',
-      data: barData,
+      data: barData.value,
     }, {
       type: 'line',
-      data: lineData,
+      data: lineData.value,
     }, {
       type: 'pie',
-      data: dimensions.map(o => ({
-        name: o,
-        value: random(0, 100)
-      })),
+      data: pieData.value,
       radius: [0, 30],
       right: 0,
       top: 0,
     }],
     tooltip: {},
   }, theme)
+  console.log(option);
+  return option
 })
 
 const { el } = useChart({
   option,
 })
+
+useIntervalFn(() => {
+  barData.value = generateData()
+  lineData.value = generateData()
+  pieData.value = generateData()
+}, 3000)
 
 </script>
