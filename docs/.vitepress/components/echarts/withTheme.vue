@@ -1,9 +1,9 @@
 <template>
-  <div ref="el" class="h-[300px]" />
-
-  <div class="text-center">
+  <div class="text-right">
     <ElButton type="primary" link @click="popper.settings = true">配置主题</ElButton>
   </div>
+  
+  <div ref="el" class="mt-2 h-[300px]" />
 
   <ElDrawer v-model="popper.settings" title="配置主题" size="35%" append-to-body modal-class="bg-[#000]/5">
     <ElTabs v-model="(value1 as any)" tab-position="left">
@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { Theme, withTheme } from '@shoppingzh/tools/lib/echarts'
+import { withTheme, Theme } from '@shoppingzh/tools/lib/echarts'
 import { random } from 'lodash';
 import useChart from 'magic-hooks/lib/useChart'
 import useSelect from 'magic-hooks/lib/useSelect'
@@ -44,6 +44,14 @@ const popper = reactive({
 })
 
 const theme = reactive<Theme>({
+  title: {
+    backgroundColor: 'rgba(0, 0, 0, .4)',
+    textStyle: {
+      color: '#fff',
+      fontSize: 16,
+      fontWeight: 'lighter',
+    }
+  },
   axis: {
     category: {
       axisLabel: {
@@ -76,7 +84,23 @@ const theme = reactive<Theme>({
     },
     line: {
       smooth: true,
+    },
+    pie: {
+      radius: [30, 45],
+      label: {
+        show: false,
+      }
     }
+  },
+  legend: {
+    plain: {
+      itemWidth: 10,
+      itemHeight: 10,
+    },
+    scroll: {
+      itemWidth: 5,
+      itemHeight: 5,
+    },
   }
 })
 const { activeValue: value1, items: tabs1 } = useSelect({
@@ -105,6 +129,12 @@ const axis = computed(() => theme.axis[value2.value as keyof Theme['axis']])
 
 const option = computed(() => {
   return withTheme({
+    title: [{
+      text: '标题一',
+    }, {
+      text: '标题二',
+      right: 0,
+    }],
     xAxis: {
       type: 'category',
       data: dimensions,
@@ -112,12 +142,30 @@ const option = computed(() => {
     yAxis: {
       type: 'value',
     },
+    legend: [{
+      type: 'plain',
+    }, {
+      type: 'scroll',
+      top: 50,
+      right: 0,
+      height: 100,
+      orient: 'vertical',
+    }],
     series: [{
       type: 'bar',
       data: barData,
     }, {
       type: 'line',
       data: lineData,
+    }, {
+      type: 'pie',
+      data: dimensions.map(o => ({
+        name: o,
+        value: random(0, 100)
+      })),
+      radius: [0, 30],
+      right: 0,
+      top: 0,
     }],
     tooltip: {},
   }, theme)
