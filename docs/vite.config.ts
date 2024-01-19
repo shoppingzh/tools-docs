@@ -1,8 +1,8 @@
 import { resolve } from 'path'
-import { defineConfig } from 'vite'
+import { UserConfig } from 'vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
-export default defineConfig({
+export default {
   resolve: {
     alias: [
       { find: '@', replacement: resolve(__dirname, './.vitepress')}
@@ -18,8 +18,10 @@ export default defineConfig({
   ],
   ssr: {
     noExternal: [
-      'lodash',
-      '@shoppingzh/tools',
+      /^@babel\/runtime/,
+      /lodash/,
+      /magic-hooks/,
+      /@shoppingzh\/tools/
     ]
   }
-})
+} as UserConfig

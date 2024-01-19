@@ -25,9 +25,22 @@ export default defineConfig({
       text: '🎯 快速入手',
       link: '/start.md'
     }, {
-      text: '🔖 模块',
+      text: '🛒 模块',
       link: getFirstDocLink('/api')
+    }, /* {
+      text: '🛡️ 测试用例',
+      link: getFirstDocLink('/test')
+    },  */{
+      text: '⛵ 其他',
+      link: getFirstDocLink('/others')
     }],
     sidebar: autoGenerateSidebar() as any,
+    search: {
+      provider: 'local'
+    },
+    socialLinks: [{
+      icon: 'github',
+      link: 'https://github.com/shoppingzh/tools',
+    }]
   }
 })
