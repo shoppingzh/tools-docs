@@ -7,7 +7,9 @@
       <span>试一试</span>
     </div>
     <div class="example__inner">
-      <slot />
+      <ClientOnly>
+        <slot />
+      </ClientOnly>
     </div>
   </div>
 </template>

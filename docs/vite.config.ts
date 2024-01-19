@@ -20,6 +20,8 @@ export default {
     noExternal: [
       /^@babel\/runtime/,
       /lodash/,
+      /magic-hooks/,
+      /@shoppingzh\/tools/
     ]
   }
 } as UserConfig

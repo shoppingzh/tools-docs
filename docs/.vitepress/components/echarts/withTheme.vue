@@ -1,7 +1,7 @@
 <template>
-  <div class="text-right">
+  <!-- <div class="text-right">
     <ElButton type="primary" link @click="popper.settings = true">配置主题</ElButton>
-  </div>
+  </div> -->
 
   <div>
     <div ref="el" class="mt-2 h-[300px]" />
@@ -9,7 +9,7 @@
   </div>
   
 
-  <ElDrawer v-model="popper.settings" title="配置主题" size="35%" append-to-body modal-class="bg-[#000]/5">
+  <!-- <ElDrawer v-model="popper.settings" title="配置主题" size="35%" append-to-body modal-class="bg-[#000]/5">
     <ElTabs v-model="(value1 as any)" tab-position="left">
       <ElTabPane v-for="item in tabs1" :key="(item.value as any)" :name="(item.value as any)" :label="item.label" class="px-4">
         <template v-if="value1 === 'axis'">
@@ -30,7 +30,7 @@
         </template>
       </ElTabPane>
     </ElTabs>
-  </ElDrawer>
+  </ElDrawer> -->
 </template>
 
 <script setup lang="ts">
