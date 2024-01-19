@@ -54,7 +54,7 @@ const pieData = ref(generateData())
 
 const theme = reactive<Theme>({
   color: ['#00bbf9', '#f15bb5', '#9b5de5', '#fee440', '#8ac926', '#ff006e'],
-  backgroundColor: 'rgba(0, 0, 0, 0.05)',
+  backgroundColor: 'rgba(0, 0, 0, 0.025)',
   title: {
     backgroundColor: 'rgba(0, 0, 0, .4)',
     textStyle: {
