@@ -2,8 +2,12 @@
   <div class="text-right">
     <ElButton type="primary" link @click="popper.settings = true">配置主题</ElButton>
   </div>
+
+  <div>
+    <div ref="el" class="mt-2 h-[300px]" />
+    <div ref="el2" class="mt-2 h-[300px]"></div>
+  </div>
   
-  <div ref="el" class="mt-2 h-[300px]" />
 
   <ElDrawer v-model="popper.settings" title="配置主题" size="35%" append-to-body modal-class="bg-[#000]/5">
     <ElTabs v-model="(value1 as any)" tab-position="left">
@@ -49,6 +53,8 @@ const lineData = ref(generateData())
 const pieData = ref(generateData())
 
 const theme = reactive<Theme>({
+  color: ['#00bbf9', '#f15bb5', '#9b5de5', '#fee440', '#8ac926', '#ff006e'],
+  backgroundColor: 'rgba(0, 0, 0, 0.05)',
   title: {
     backgroundColor: 'rgba(0, 0, 0, .4)',
     textStyle: {
@@ -91,9 +97,8 @@ const theme = reactive<Theme>({
       smooth: true,
     },
     pie: {
-      radius: [30, 45],
       label: {
-        show: false,
+        color: '#9b5de5'
       }
     }
   },
@@ -160,21 +165,25 @@ const option = computed(() => {
     }, {
       type: 'line',
       data: lineData.value,
-    }, {
-      type: 'pie',
-      data: pieData.value,
-      radius: [0, 30],
-      right: 0,
-      top: 0,
     }],
     tooltip: {},
   }, theme)
-  console.log(option);
   return option
 })
 
 const { el } = useChart({
   option,
+})
+const { el: el2 } = useChart({
+  option: computed(() => withTheme({
+    series: [{
+      type: 'pie',
+      data: pieData.value,
+      radius: [20, 85],
+      right: 0,
+      top: 0,
+    }]
+  }, theme))
 })
 
 useIntervalFn(() => {
