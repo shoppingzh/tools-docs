@@ -2,9 +2,13 @@
 
 ## withTheme
 
+[在线设计](https://echarts-theme-builder.vercel.app/) 后，下载主题并导入，即可马上看到效果。
+
+
 <Example>
   <echarts-withTheme />
 </Example>
+
 
 **签名**
 

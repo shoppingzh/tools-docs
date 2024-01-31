@@ -45,7 +45,7 @@ onBeforeMount(() => {
 
 onMounted(() => {
   createWatermark(watermarkEl.value, '工具库', {
-    textColor: 'rgba(100, 100, 100, .1)',
+    textColor: 'rgba(100, 100, 100, .05)',
     padding: [200, 200],
     rotate: -30,
   })

@@ -50,7 +50,7 @@ const text = ref('我是一个水印')
 const options = reactive<CreateWatermarkOptions>({
   textSize: 20,
   rotate: -15,
-  textColor: 'rgba(0, 0, 0, .1)',
+  textColor: 'rgba(0, 0, 0, .05)',
   padding: [100, 100],
 })
 const paddingX = computed({
