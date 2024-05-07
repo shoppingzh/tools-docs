@@ -25,7 +25,7 @@
     "@babel/runtime": "^7.23.8",
     "@babel/runtime-corejs3": "^7.23.8",
     "@element-plus/icons-vue": "^2.3.1",
-    "@shoppingzh/tools": "^0.0.4",
+    "@shoppingzh/tools": "^0.0.5",
     "@vueuse/core": "^10.7.2",
     "core-js": "^3.35.0",
     "core-js-pure": "^3.35.0",
