@@ -192,3 +192,45 @@ export type CreateWatermarkOptions = WatermarkCoreOptions
 
 (void)
 
+## copyText 复制文本
+
+复制文本到剪切板。
+
+<Example>
+  <dom-copyText />
+</Example>
+
+**签名**
+
+`copyText(text: string): Promise<void>`
+
+**参数**
+
+1. `text` (string): 文本内容
+
+**返回值**
+
+`Promise<void>`
+
+
+
+## getCopiedText 获取复制的文本
+
+从剪切板获取复制的文本。
+
+<Example>
+  <dom-getCopiedText />
+</Example>
+
+**签名**
+
+`getCopiedText(): Promise<string>`
+
+
+**参数**
+
+无
+
+**返回值**
+
+(`Promise<string>`): 文本内容
