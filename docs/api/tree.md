@@ -1,5 +1,9 @@
 # tree
 
+::: tip
+开始tree的api学习之前，推荐你先阅读这篇文章：[树的奇妙之旅](../others/树的奇妙之旅.md)。
+:::
+
 ## parseFromList 集合转树
 
 <Example>
